@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- ░░ SECURITY HEADERS ░░ -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://cdnjs.cloudflare.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' 'unsafe-inline' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://www.googletagmanager.com https://fonts.googleapis.com; frame-ancestors 'none'; form-action 'self' https://formspree.io; base-uri 'self';" />
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<!-- NOTE: X-Frame-Options and frame-ancestors require HTTP headers from server, not meta tags -->
+<!-- ░░ SEO & META ░░ -->
+<link rel="canonical" href="https://zayedyousuf.com/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="description" content="Mohammed Zayed Yousuf — AI Engineer & Data Scientist. Specializing in biometric systems, deep learning, and LLM engineering. Liverpool John Moores University BSc Computer Science 2026.">
+<meta name="keywords" content="AI Engineer, Data Scientist, Machine Learning, Biometrics, Computer Vision, LLM Engineering, Python, PyTorch, FastAPI">
+<meta name="author" content="Mohammed Zayed Yousuf">
+<meta name="theme-color" content="#010108">
+<!-- Open Graph for Social Sharing -->
+<meta property="og:title" content="Mohammed Zayed Yousuf — AI Engineer & Data Scientist">
+<meta property="og:description" content="Building at the boundary of AI & Biometrics. Specializing in fairness-aware face recognition, LLM engineering, and multicultural AI systems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zayedyousuf.com">
+<meta property="og:image" content="https://zayedyousuf.com/og-image.jpg">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mohammed Zayed Yousuf — AI Engineer & Data Scientist">
+<meta name="twitter:description" content="Building at the boundary of AI & Biometrics.">
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23010108' width='100' height='100'/><circle cx='50' cy='50' r='35' fill='%2300FFD1' opacity='0.8'/></svg>">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23010108' width='100' height='100'/><circle cx='50' cy='50' r='35' fill='%2300FFD1' opacity='0.8'/></svg>">
+<!-- Preconnect for Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Mohammed Zayed Yousuf — AI Engineer & Data Scientist | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+
+<!-- ░░ GOOGLE ANALYTICS 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HJGE24432M"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-HJGE24432M');
+</script>
+
+<!-- ░░ STRUCTURED DATA (JSON-LD) FOR SEO & RICH SNIPPETS -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohammed Zayed Yousuf",
+  "url": "https://zayedyousuf.com",
+  "image": "https://zayedyousuf.com/profile.jpg",
+  "description": "AI Engineer & Data Scientist specializing in biometric systems and deep learning",
+  "jobTitle": "AI Research Engineer",
+  "worksFor": {"@type": "EducationalOrganization", "name": "Liverpool John Moores University"},
+  "sameAs": ["https://linkedin.com/in/mohammed-zayed-yousuf/", "https://github.com/mohammedzayedyousuf1"]
+}
+</script>
+
+<style>
+:root{
+  --void:#010108;--deep:#050514;--panel:#08081A;
+  --teal:#00FFD1;--tdim:rgba(0,255,209,.12);--tglow:rgba(0,255,209,.25);
+  --violet:#7B38FF;--vdim:rgba(123,56,255,.12);
+  --coral:#FF3D6E;--cdim:rgba(255,61,110,.12);
+  --gold:#FFCB47;--text:#F2EDE8;--sub:rgba(242,237,232,.78);
+  --muted:#8B8BA3;--border:rgba(255,255,255,.06);--bteal:rgba(0,255,209,.2);
+  --disp:'Bebas Neue',sans-serif;--head:'Syne',sans-serif;
+  --mono:'Space Mono',monospace;--body:'Outfit',sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{background:var(--void);color:var(--text);font-family:var(--body);font-weight:300;cursor:auto;overflow-x:hidden;}
+::-webkit-scrollbar{width:2px;}::-webkit-scrollbar-track{background:var(--void);}::-webkit-scrollbar-thumb{background:var(--teal);}
+
+/* FOCUS STYLES FOR ACCESSIBILITY */
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+
+/* NOISE */
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9990;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");opacity:.4;}
+
+/* SCAN */
+.scanl{position:fixed;top:-2px;left:0;width:100%;height:2px;background:linear-gradient(to right,transparent,var(--teal),transparent);opacity:.12;pointer-events:none;z-index:9989;animation:scanD 8s linear infinite;}
+@keyframes scanD{from{top:0}to{top:100vh}}
+
+/* CURSOR */
+#cd,#cr{position:fixed;top:0;left:0;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);opacity:0;}
+#cd{width:7px;height:7px;background:var(--teal);border-radius:50%;mix-blend-mode:screen;transition:width .15s,height .15s,background .15s;}
+#cr{width:34px;height:34px;border:1px solid rgba(0,255,209,.45);border-radius:50%;transition:width .25s,height .25s,border-color .25s,transform .1s ease;}
+body.h #cd{width:5px;height:5px;background:var(--coral);}
+body.h #cr{width:50px;height:50px;border-color:rgba(255,61,110,.5);}
+#ctrail{position:fixed;top:0;left:0;pointer-events:none;z-index:99998;}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--void);z-index:99997;display:flex;flex-direction:column;justify-content:center;padding:10vw;transition:opacity .8s,visibility .8s;}
+#loader.out{opacity:0;visibility:hidden;pointer-events:none;}
+.bl{font-family:var(--mono);font-size:clamp(.6rem,1.1vw,.8rem);letter-spacing:.15em;color:#8B8BA3;margin-bottom:.5rem;opacity:0;transform:translateX(-10px);transition:opacity .35s,transform .35s;}
+.bl.s{opacity:1;transform:none;}.bl.hi{color:var(--teal);}.bl.wa{color:var(--coral);}
+.bbar-wrap{margin-top:1.8rem;width:clamp(200px,34vw,420px);opacity:0;transition:opacity .3s;}
+.bbar-wrap.s{opacity:1;}
+.bbar-track{height:1px;background:rgba(255,255,255,.08);overflow:hidden;}
+.bbar{height:100%;width:0;background:var(--teal);box-shadow:0 0 10px var(--tglow);transition:width 1.5s var(--ease);}
+.bpct{font-family:var(--mono);font-size:.6rem;letter-spacing:.25em;color:var(--teal);margin-top:.6rem;}
+.bready{font-family:var(--disp);font-size:clamp(2rem,4vw,4.5rem);letter-spacing:.3em;color:var(--teal);margin-top:2rem;opacity:0;transition:opacity .5s;}
+.bready.s{opacity:1;}
+
+/* THREE.JS BG */
+#bgc{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}
+
+/* NAV */
+nav{position:fixed;top:0;width:100%;z-index:1000;padding:1.4rem 4rem;display:flex;justify-content:space-between;align-items:center;transition:background .4s,backdrop-filter .4s;}
+nav.sk{background:rgba(1,1,8,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);}
+.nid{font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;color:var(--teal);text-decoration:none;text-transform:uppercase;font-weight:600;}
+.nls{display:flex;gap:2.5rem;list-style:none;}
+.nls a{font-family:var(--mono);font-size:.58rem;letter-spacing:.2em;color:#A8A8C8;text-decoration:none;text-transform:uppercase;transition:color .3s;position:relative;}
+.nls a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--teal);transition:width .3s;}
+.nls a:hover{color:var(--text);}.nls a:hover::after{width:100%;}
+
+/* HERO */
+#hero{position:relative;height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 4rem 5rem;overflow:hidden;z-index:1;}
+.hcorner{position:absolute;font-family:var(--mono);font-size:.58rem;letter-spacing:.22em;color:var(--teal);text-transform:uppercase;}
+.hcorner.tl{top:2.5rem;left:4rem;opacity:0;animation:fIn .7s 1.2s var(--ease) forwards;}
+.hcorner.tr{top:4.5rem;right:4rem;text-align:right;opacity:0;animation:fIn .7s 1.4s var(--ease) forwards;}
+.hlbl{font-family:var(--mono);font-size:.58rem;letter-spacing:.4em;color:var(--teal);text-transform:uppercase;margin-bottom:2rem;opacity:0;animation:fIn .7s 1.5s var(--ease) forwards;}
+.hname{font-family:var(--disp);font-size:clamp(6rem,16vw,21rem);line-height:.95;letter-spacing:-.01em;margin-bottom:1.5rem;opacity:0;animation:fUp .9s 1.7s var(--ease) forwards;}
+.hname .so{color:var(--text);}
+.hname .ou{-webkit-text-stroke:1.5px var(--teal);color:transparent;display:block;}
+.hrow{display:flex;align-items:flex-end;justify-content:space-between;margin-top:2.2rem;opacity:0;animation:fIn .7s 2s var(--ease) forwards;}
+.hsub{font-family:var(--mono);font-size:clamp(.6rem,.95vw,.78rem);letter-spacing:.14em;color:var(--sub);text-transform:uppercase;max-width:380px;line-height:1.75;}
+.hsub span{color:var(--teal);}
+.hcopy{display:flex;flex-direction:column;gap:1.4rem;align-items:flex-start;}
+.hcta{display:flex;flex-wrap:wrap;gap:.8rem;}
+.btnx{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:.78rem 1.05rem;border:1px solid var(--bteal);font-family:var(--mono);font-size:.56rem;letter-spacing:.18em;color:var(--teal);text-decoration:none;text-transform:uppercase;background:rgba(0,255,209,.045);transition:background .25s,color .25s,border-color .25s,transform .25s;}
+.btnx:hover{background:var(--teal);color:var(--void);border-color:var(--teal);transform:translateY(-2px);}
+.btnx.ghost{background:transparent;color:#A8A8C8;border-color:var(--border);}
+.btnx.ghost:hover{color:var(--text);border-color:var(--teal);background:rgba(0,255,209,.08);}
+.hst{display:flex;gap:2.5rem;}
+.hst-i .n{font-family:var(--disp);font-size:2.4rem;color:var(--teal);line-height:1;}
+.hst-i .l{font-family:var(--mono);font-size:.48rem;letter-spacing:.2em;color:#9999B8;}
+.sind{position:absolute;bottom:4.5rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.7rem;z-index:2;opacity:0;animation:fIn .7s 2.3s var(--ease) forwards;}
+.sind span{font-family:var(--mono);font-size:.48rem;letter-spacing:.3em;color:#9999B8;}
+.sindl{width:1px;height:48px;background:linear-gradient(to bottom,var(--teal),transparent);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+
+/* SECTION COMMONS */
+.sw{max-width:1280px;margin:0 auto;padding:0 4rem;}
+.slbl{font-family:var(--body);font-size:.74rem;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;display:flex;align-items:center;gap:1rem;margin-bottom:1.4rem;font-weight:500;}
+.slbl::before{content:'';width:32px;height:1px;background:var(--teal);}
+.sh{font-family:var(--head);font-size:clamp(2.5rem,5vw,5rem);font-weight:700;line-height:1;letter-spacing:-.03em;color:var(--text);}
+.sh em{font-style:italic;color:var(--teal);font-weight:400;}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease);}
+.rv.on{opacity:1;transform:none;}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* ABOUT */
+#about{padding:12rem 0 8rem;position:relative;z-index:1;}
+.ag{display:grid;grid-template-columns:1fr 1.45fr;gap:8rem;align-items:start;}
+.pw{margin-top:3rem;}
+.pb{position:relative;aspect-ratio:3/4;border:1px solid var(--border);background:var(--panel);overflow:hidden;}
+.pb::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,255,209,.04),rgba(123,56,255,.04));}
+.pph{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;height:100%;gap:1rem;color:#8B8BA3;font-family:var(--mono);font-size:.52rem;letter-spacing:.14em;text-transform:uppercase;padding:2rem;}
+.pph svg{stroke:#8B8BA3;fill:none;stroke-width:.8;width:42px;}
+.profile-mark{font-family:var(--disp);font-size:clamp(5rem,10vw,8rem);line-height:.82;color:var(--teal);letter-spacing:.02em;}
+.profile-role{font-family:var(--head);font-size:1.25rem;font-weight:700;letter-spacing:0;text-transform:none;color:var(--text);line-height:1.2;}
+.profile-note{font-size:.72rem;line-height:1.8;color:var(--sub);text-transform:none;letter-spacing:.08em;}
+.pc{position:absolute;width:18px;height:18px;border-color:var(--teal);border-style:solid;}
+.pc.tl{top:-1px;left:-1px;border-width:2px 0 0 2px;}
+.pc.br{bottom:-1px;right:-1px;border-width:0 2px 2px 0;}
+.pd{position:absolute;bottom:0;left:0;right:0;padding:.7rem 1rem;background:rgba(1,1,8,.92);backdrop-filter:blur(12px);border-top:1px solid var(--border);}
+.pd p{font-family:var(--mono);font-size:.5rem;letter-spacing:.18em;color:var(--teal);}
+.bp{font-size:1rem;line-height:1.95;color:var(--sub);margin-bottom:1.3rem;}
+.bp strong{color:var(--text);font-weight:400;}
+.vp{margin:2rem 0 2.3rem;padding:1.25rem 1.35rem;border:1px solid var(--bteal);background:rgba(0,255,209,.045);display:grid;gap:.35rem;}
+.vp-k{font-family:var(--mono);font-size:.5rem;letter-spacing:.26em;color:var(--teal);text-transform:uppercase;}
+.vp-v{font-family:var(--head);font-size:1.1rem;font-weight:600;line-height:1.55;color:var(--text);}
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);margin-top:2.8rem;}
+.dc{background:var(--panel);padding:1.5rem 1.3rem;border-right:1px solid var(--border);position:relative;overflow:hidden;}
+.dc:last-child{border-right:none;}
+.dc::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--teal);transition:width .55s;}
+.dc:hover::after{width:100%;}
+.dn{font-family:var(--disp);font-size:2.6rem;color:var(--teal);line-height:1;}
+.dl{font-family:var(--mono);font-size:.48rem;letter-spacing:.2em;color:#9999B8;margin-top:.3rem;}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:2.2rem;}
+.chip{padding:.38rem .85rem;border:1px solid var(--border);font-family:var(--mono);font-size:.52rem;letter-spacing:.12em;color:#A8A8C8;text-transform:uppercase;transition:border-color .3s,color .3s,background .3s;}
+.chip:hover{border-color:var(--teal);color:var(--teal);background:var(--tdim);}
+
+/* SKILLS */
+#skills{padding:10rem 0;background:var(--deep);position:relative;z-index:1;overflow:hidden;}
+#skills::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(123,56,255,.05) 0%,transparent 70%);pointer-events:none;}
+.si{display:grid;grid-template-columns:1fr 1fr;gap:6rem;margin-bottom:5rem;align-items:end;}
+.sd{font-size:.93rem;line-height:1.9;color:var(--sub);margin-top:1.4rem;max-width:400px;}
+.scc{display:grid;grid-template-columns:repeat(6,1fr);gap:1.5rem;}
+.sc{display:flex;flex-direction:column;align-items:center;gap:.8rem;cursor:pointer;}
+.sc svg{width:100%;max-width:88px;transform:rotate(-90deg);}
+.sc-tr{fill:none;stroke:var(--border);stroke-width:5;}
+.sc-fi{fill:none;stroke-width:5;stroke-linecap:round;stroke-dasharray:264;stroke-dashoffset:264;transition:stroke-dashoffset 1.4s var(--ease);}
+.sc:nth-child(1) .sc-fi{stroke:var(--teal);}
+.sc:nth-child(2) .sc-fi{stroke:var(--teal);}
+.sc:nth-child(3) .sc-fi{stroke:var(--violet);}
+.sc:nth-child(4) .sc-fi{stroke:var(--teal);}
+.sc:nth-child(5) .sc-fi{stroke:var(--coral);}
+.sc:nth-child(6) .sc-fi{stroke:var(--violet);}
+.scw{position:relative;}
+.sci{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.sc-p{font-family:var(--mono);font-size:.68rem;color:var(--text);}
+.sc-n{font-family:var(--mono);font-size:.48rem;letter-spacing:.14em;color:#A8A8C8;text-transform:uppercase;text-align:center;}
+.trow{display:flex;flex-wrap:wrap;gap:1px;margin-top:3.5rem;border:1px solid var(--border);}
+.tt{padding:.75rem 1.3rem;background:var(--panel);font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;color:#A8A8C8;text-transform:uppercase;transition:background .3s,color .3s;border-right:1px solid var(--border);}
+.tt:hover{background:var(--tdim);color:var(--teal);}
+
+/* PROJECTS HORIZ SCROLL */
+#projects{height:100vh;position:relative;z-index:1;overflow:hidden;}
+.ptop{position:absolute;top:0;left:0;right:0;padding:1.8rem 4rem;display:flex;justify-content:space-between;align-items:center;z-index:10;border-bottom:1px solid var(--border);background:rgba(1,1,8,.85);backdrop-filter:blur(16px);}
+.ptl{display:flex;align-items:center;gap:2rem;}
+.ptlbl{font-family:var(--mono);font-size:.58rem;letter-spacing:.35em;color:var(--teal);text-transform:uppercase;font-weight:600;}
+.ptcnt{font-family:var(--disp);font-size:1.1rem;color:#A8A8C8;}
+.phint{font-family:var(--mono);font-size:.52rem;letter-spacing:.18em;color:#9999B8;}
+.ptrack{display:flex;align-items:center;height:100vh;padding:5rem 4rem 2.5rem;gap:2rem;will-change:transform;}
+.pslide{flex:0 0 78vw;height:84vh;max-height:680px;background:var(--panel);border:1px solid var(--border);position:relative;overflow:hidden;transition:border-color .4s,transform .5s var(--ease),box-shadow .5s var(--ease);cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;}
+.pslide:hover{border-color:var(--bteal);}
+.pslide:hover{box-shadow:0 24px 70px rgba(0,255,209,.12);}
+.pslide:focus-visible{outline:2px solid var(--teal);outline-offset:4px;}
+.psnum{position:absolute;top:1.2rem;right:2rem;font-family:var(--disp);font-size:clamp(7rem,11vw,14rem);color:rgba(255,255,255,.022);line-height:1;pointer-events:none;user-select:none;}
+.psacc{position:absolute;top:0;left:0;bottom:0;width:3px;transform:scaleY(0);transform-origin:bottom;transition:transform .55s var(--ease);}
+.pslide:hover .psacc{transform:scaleY(1);}
+.psa-0{background:linear-gradient(to top,var(--teal),var(--violet));}
+.psa-1{background:linear-gradient(to top,var(--violet),var(--coral));}
+.psa-2{background:linear-gradient(to top,var(--coral),var(--gold));}
+.psa-3{background:linear-gradient(to top,var(--teal),var(--gold));}
+.psa-4{background:linear-gradient(to top,var(--violet),var(--teal));}
+.psbg{position:absolute;inset:0;opacity:0;transition:opacity .5s;pointer-events:none;}
+.psbg-0{background:radial-gradient(ellipse at 80% 15%,rgba(0,255,209,.07),transparent 65%);}
+.psbg-1{background:radial-gradient(ellipse at 80% 15%,rgba(123,56,255,.07),transparent 65%);}
+.psbg-2{background:radial-gradient(ellipse at 80% 15%,rgba(255,61,110,.07),transparent 65%);}
+.psbg-3{background:radial-gradient(ellipse at 80% 15%,rgba(255,203,71,.07),transparent 65%);}
+.psbg-4{background:radial-gradient(ellipse at 80% 15%,rgba(123,56,255,.09),transparent 65%);}
+.pslide:hover .psbg{opacity:1;}
+.psc{padding:2.2rem 2.8rem;position:relative;z-index:2;}
+.pscat{font-family:var(--body);font-size:.72rem;letter-spacing:.08em;color:#A8A8C8;text-transform:uppercase;margin-bottom:.9rem;}
+.pstit{font-family:var(--head);font-size:clamp(1.8rem,3.2vw,3rem);font-weight:700;line-height:1.05;letter-spacing:-.025em;color:var(--text);margin-bottom:.9rem;}
+.pstit em{font-style:italic;font-weight:400;color:var(--teal);}
+.psdesc{font-size:.86rem;line-height:1.75;color:var(--sub);max-width:540px;margin-bottom:1.4rem;}
+.pschips{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.5rem;}
+.pschip{padding:.26rem .68rem;border:1px solid var(--border);font-family:var(--body);font-size:.7rem;letter-spacing:.03em;color:#9999B8;}
+.psactions{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.2rem;}
+.pslink{font-family:var(--body);font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(0,255,209,.35);padding-bottom:.18rem;}
+.pslink:hover{border-color:var(--teal);}
+.psex{max-height:0;overflow:hidden;transition:max-height .6s var(--ease);border-top:1px solid var(--border);}
+.pslide.op .psex{max-height:280px;}
+.psex-in{padding:1.4rem 2.8rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.psel{font-family:var(--body);font-size:.74rem;letter-spacing:.06em;color:var(--teal);margin-bottom:.55rem;font-weight:600;}
+.psxt{font-size:.8rem;line-height:1.75;color:var(--sub);}
+.psxl{list-style:none;display:flex;flex-direction:column;gap:.38rem;}
+.psxl li{font-family:var(--mono);font-size:.58rem;color:var(--sub);padding-left:.9rem;position:relative;}
+.psxl li::before{content:'→';position:absolute;left:0;color:var(--teal);}
+.psfoot{padding:1rem 2.8rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:rgba(1,1,8,.55);backdrop-filter:blur(8px);}
+.psyr{font-family:var(--mono);font-size:.55rem;letter-spacing:.15em;color:#9999B8;}
+.psarr{width:36px;height:36px;border:1px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#A8A8C8;transition:all .35s;}
+.pslide:hover .psarr{border-color:var(--teal);color:var(--teal);transform:rotate(45deg);}
+.psbadge{position:absolute;top:1.6rem;left:2.8rem;padding:.28rem .75rem;background:var(--tdim);border:1px solid var(--bteal);font-family:var(--mono);font-size:.48rem;letter-spacing:.25em;color:var(--teal);}
+
+/* EDUCATION */
+#education{padding:12rem 0;position:relative;z-index:1;background:var(--deep);overflow:hidden;}
+#education::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 78% 44%,rgba(0,255,209,.08),transparent 30%),linear-gradient(to bottom,transparent 0%,rgba(0,255,209,.05) 52%,transparent 53%);pointer-events:none;}
+#education::after{content:'';position:absolute;right:-9vw;top:3rem;width:min(52vw,760px);aspect-ratio:1;border:1px solid rgba(0,255,209,.24);border-radius:50%;background:radial-gradient(circle at 22% 28%,rgba(0,255,209,.9) 0 1px,transparent 2px),radial-gradient(circle at 72% 24%,rgba(255,61,110,.75) 0 1px,transparent 2px),radial-gradient(circle at 42% 66%,rgba(126,87,255,.8) 0 1px,transparent 2px),radial-gradient(circle at 62% 48%,rgba(0,255,209,.55) 0 1px,transparent 2px),linear-gradient(32deg,transparent 48%,rgba(0,255,209,.18) 49%,transparent 50%),linear-gradient(142deg,transparent 48%,rgba(126,87,255,.14) 49%,transparent 50%);background-size:13px 13px,17px 17px,19px 19px,23px 23px,100% 100%,100% 100%;opacity:.42;filter:drop-shadow(0 0 24px rgba(0,255,209,.08));pointer-events:none;}
+.edu-grid{margin-top:4.8rem;display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;position:relative;z-index:1;}
+.edu-card{min-height:310px;padding:3rem 3.6rem;border:1px solid var(--border);background:rgba(8,8,26,.88);backdrop-filter:blur(18px);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center;transition:border-color .35s,transform .35s var(--ease),background .35s;}
+.edu-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 10%,rgba(0,255,209,.075),transparent 58%);opacity:0;transition:opacity .35s;pointer-events:none;}
+.edu-card:hover{border-color:var(--bteal);transform:translateY(-4px);background:rgba(10,10,32,.92);}
+.edu-card:hover::before{opacity:1;}
+.edu-deg{font-family:var(--head);font-size:clamp(1.25rem,2vw,1.75rem);font-weight:700;line-height:1.25;color:var(--text);margin-bottom:1rem;position:relative;z-index:1;}
+.edu-deg em{font-style:italic;font-weight:400;color:var(--teal);}
+.edu-inst{font-family:var(--body);font-size:.78rem;letter-spacing:.04em;line-height:1.7;color:#A8A8C8;margin-bottom:1rem;position:relative;z-index:1;}
+.edu-year{font-family:var(--body);font-size:.78rem;letter-spacing:.06em;color:var(--teal);margin-bottom:1.9rem;position:relative;z-index:1;}
+.edu-note{font-size:1rem;line-height:1.8;color:var(--sub);max-width:620px;position:relative;z-index:1;}
+.edu-badge{align-self:flex-start;margin-top:2rem;padding:.55rem 1.2rem;border:1px solid var(--bteal);background:var(--tdim);font-family:var(--body);font-size:.78rem;letter-spacing:.06em;font-weight:500;line-height:1.5;color:var(--teal);position:relative;z-index:1;}
+
+/* AWARDS */
+#awards{padding:12rem 0;position:relative;z-index:1;background:var(--void);}
+.awards-grid{margin-top:4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);background:var(--border);}
+.award-card{min-height:220px;padding:1.6rem;background:var(--panel);position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;transition:border-color .35s,background .35s,transform .35s var(--ease);}
+.award-card::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 80% 10%,rgba(0,255,209,.075),transparent 58%);opacity:0;transition:opacity .35s;}
+.award-card:hover{background:#0A0A20;transform:translateY(-4px);}
+.award-card:hover::before,.award-card.highlight::before{opacity:1;}
+.award-card.highlight{background:linear-gradient(135deg,rgba(0,255,209,.11),rgba(8,8,26,.92));}
+.award-icon{position:absolute;top:1.4rem;left:1.5rem;width:34px;height:34px;border:1px solid var(--bteal);display:flex;align-items:center;justify-content:center;color:var(--teal);background:rgba(0,255,209,.045);}
+.award-icon::before{content:'';font-family:var(--mono);font-size:4rem;line-height:4;}
+.award-card.highlight .award-icon::before{content:'01';font-size:.58rem;letter-spacing:.12em;}
+.award-title{font-family:var(--head);font-size:1.22rem;font-weight:700;line-height:1.25;color:var(--text);position:relative;z-index:1;margin-bottom:.8rem;}
+.award-org{font-family:var(--body);font-size:.76rem;letter-spacing:.04em;line-height:1.65;color:#A8A8C8;text-transform:uppercase;position:relative;z-index:1;margin-bottom:.7rem;}
+.award-date{font-family:var(--body);font-size:.74rem;letter-spacing:.05em;color:var(--teal);text-transform:uppercase;position:relative;z-index:1;}
+
+/* CONTACT */
+#contact{padding:12rem 0 8rem;position:relative;z-index:1;overflow:hidden;}
+#contact::before{content:'';position:absolute;bottom:-250px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,255,209,.04) 0%,transparent 65%);pointer-events:none;}
+.cbig{font-family:var(--disp);font-size:clamp(3rem,8vw,9.5rem);line-height:.88;letter-spacing:.02em;color:var(--text);margin:2.5rem 0 5rem;}
+.cbig .ac{color:var(--teal);}
+.cls{border-top:1px solid var(--border);}
+.cl{display:flex;align-items:center;justify-content:space-between;padding:1.7rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);position:relative;overflow:hidden;transition:color .3s;}
+.cl::before{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--teal);transition:width .55s var(--ease);}
+.cl:hover{color:var(--teal);}.cl:hover::before{width:100%;}
+.cln{font-family:var(--head);font-size:clamp(1.5rem,2.5vw,2.2rem);font-weight:600;}
+.clh{font-family:var(--body);font-size:.78rem;letter-spacing:.04em;color:#A8A8C8;transition:color .3s;}
+.cl:hover .clh{color:var(--teal);}
+
+/* FOOTER */
+footer{padding:2.2rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;z-index:1;position:relative;}
+.fc,.fb{font-family:var(--mono);font-size:.5rem;letter-spacing:.2em;color:#8B8BA3;}
+.fb span{color:var(--teal);}
+
+
+/* CONTACT FORM */
+.cform{margin-top:3.5rem;border:1px solid var(--border);background:var(--panel);padding:3rem;}
+.cform-title{font-family:var(--mono);font-size:.58rem;letter-spacing:.35em;color:var(--teal);text-transform:uppercase;margin-bottom:2rem;font-weight:600;}
+.cform-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;}
+.cform-field{display:flex;flex-direction:column;gap:.6rem;}
+.cform-field.full{grid-column:1/-1;}
+.cform-label{font-family:var(--body);font-size:.74rem;letter-spacing:.06em;color:#A8A8C8;text-transform:uppercase;font-weight:500;}
+.cform-input,.cform-textarea{
+  background:var(--void);border:1px solid var(--border);color:var(--text);
+  font-family:var(--body);font-size:.9rem;font-weight:300;
+  padding:.9rem 1.1rem;outline:none;width:100%;
+  transition:border-color .3s,box-shadow .3s;resize:none;
+}
+.cform-input:focus,.cform-textarea:focus{border-color:var(--teal);box-shadow:0 0 0 1px var(--tdim);}
+.cform-textarea{min-height:120px;}
+.cform-input::placeholder,.cform-textarea::placeholder{color:#7A7A96;font-size:.85rem;}
+.cform-submit{
+  width:100%;padding:1.1rem;margin-top:.5rem;
+  background:transparent;border:1px solid var(--teal);
+  font-family:var(--mono);font-size:.65rem;letter-spacing:.35em;
+  color:var(--teal);text-transform:uppercase;cursor:pointer;
+  transition:background .3s,color .3s,box-shadow .3s,transform .2s;
+  position:relative;
+}
+.cform-submit:hover{background:var(--teal);color:var(--void);box-shadow:0 0 30px var(--tglow);transform:translateY(-2px);}
+.cform-submit:active{transform:translateY(0);}
+.cform-submit:focus-visible{outline:2px solid var(--teal);outline-offset:2px;}
+.cform-submit:disabled{opacity:.5;cursor:not-allowed;}
+.cform-success{
+  display:none;text-align:center;padding:3rem;
+  font-family:var(--disp);font-size:clamp(2rem,4vw,3.5rem);
+  letter-spacing:.15em;color:var(--teal);
+}
+.cform-success p{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;color:#A8A8C8;margin-top:.8rem;}
+.cform-error{font-family:var(--mono);font-size:.55rem;letter-spacing:.15em;color:var(--coral);margin-top:1rem;display:none;text-align:center;padding:1rem;background:rgba(255,61,110,.08);border:1px solid rgba(255,61,110,.2);border-radius:4px;}
+
+@media (max-width: 980px){
+  nav{padding:1rem 1.25rem;gap:1rem;align-items:flex-start;}
+  .nls{gap:.9rem;flex-wrap:wrap;justify-content:flex-end;}
+  .nls a{font-size:.5rem;letter-spacing:.12em;}
+  #hero{height:auto;min-height:100svh;padding:7rem 1.25rem 3rem;}
+  .hcorner{display:none;}
+  .hname{font-size:clamp(4.4rem,22vw,8rem);}
+  .hrow{align-items:flex-start;flex-direction:column;gap:2rem;}
+  .hsub{max-width:100%;}
+  .hst{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;border:1px solid var(--border);}
+  .hst-i{padding:1rem;background:rgba(8,8,26,.78);}
+  .sw{padding:0 1.25rem;}
+  #about,#skills,#education,#awards,#contact{padding:6rem 0;}
+  .ag,.si{grid-template-columns:1fr;gap:3rem;}
+  .pw{margin-top:2rem;max-width:360px;}
+  .dg{grid-template-columns:1fr;}
+  .dc{border-right:0;border-bottom:1px solid var(--border);}
+  .dc:last-child{border-bottom:0;}
+  .scc{grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+  .ptop{position:relative;padding:1.2rem 1.25rem;align-items:flex-start;gap:.8rem;flex-direction:column;}
+  #projects{height:auto;overflow:visible;background:var(--void);}
+  .ptrack{height:auto;display:grid;grid-template-columns:1fr;padding:1.25rem;gap:1rem;transform:none!important;}
+  .pslide{height:auto;min-height:0;max-height:none;flex:auto;}
+  .psnum{font-size:6rem;right:1rem;}
+  .psc,.psex-in,.psfoot{padding-left:1.25rem;padding-right:1.25rem;}
+  .psex{max-height:none;}
+  .psex-in{grid-template-columns:1fr;gap:1.1rem;}
+  .phint{display:none;}
+  .edu-grid{grid-template-columns:1fr;gap:1.5rem;margin-top:3rem;}
+  .edu-card{min-height:auto;padding:2rem;}
+  #education::after{right:-36vw;top:2rem;width:88vw;opacity:.22;}
+  .awards-grid{grid-template-columns:1fr 1fr;margin-top:3rem;}
+  .award-card{min-height:190px;}
+  .cbig{margin:2rem 0 3rem;}
+  .cform{padding:1.25rem;}
+  .cform-grid{grid-template-columns:1fr;}
+  footer{padding:1.5rem 1.25rem;flex-direction:column;align-items:flex-start;gap:.8rem;}
+  #cd,#cr,#ctrail{display:none;}
+}
+
+@media (max-width: 620px){
+  .nid{font-size:.55rem;letter-spacing:.18em;}
+  .nls{display:none;}
+  .hcta{width:100%;}
+  .btnx{width:100%;}
+  .hst{grid-template-columns:1fr;}
+  .scc{grid-template-columns:repeat(2,1fr);}
+  .edu-deg{font-size:1.2rem;}
+  .edu-inst{letter-spacing:.12em;}
+  .edu-badge{width:100%;text-align:center;}
+  .awards-grid{grid-template-columns:1fr;}
+  .trow{display:grid;grid-template-columns:1fr 1fr;}
+  .tt{padding:.75rem .8rem;line-height:1.4;}
+  .cl{align-items:flex-start;flex-direction:column;gap:.55rem;}
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
+  #loader{display:none!important;}
+  .rv{opacity:1;transform:none;}
+  .scanl,#ctrail,#cd,#cr{display:none!important;}
+}
+
+/* KF */
+@keyframes fIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+@keyframes fUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="scanl"></div>
+<div id="cd"></div><div id="cr"></div>
+<canvas id="ctrail"></canvas>
+<canvas id="bgc"></canvas>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="bl hi" id="b0">> PORTFOLIO v1 — INITIALISING...</div>
+  <div class="bl" id="b1">> SUBJECT: MOHAMMED ZAYED YOUSUF</div>
+  <div class="bl" id="b2">> INSTITUTION: LIVERPOOL JOHN MOORES UNIVERSITY</div>
+  <div class="bl" id="b3">> SPECIALISM: AI · ML · BIOMETRICS · DATA INTELLIGENCE</div>
+  <div class="bl" id="b4">> LOCATION: DOHA, QA // LIVERPOOL, UK</div>
+  <div class="bl wa" id="b5">> AUTHENTICATION CHECK...</div>
+  <div class="bl hi" id="b6">> CLEARANCE: GRANTED — UNRESTRICTED ACCESS</div>
+  <div class="bl" id="b7">> MOUNTING PORTFOLIO INTERFACE...</div>
+  <div class="bbar-wrap" id="bbw"><div class="bbar-track"><div class="bbar" id="bbar"></div></div><div class="bpct" id="bpct">0%</div></div>
+  <div class="bready" id="brd">ONLINE.</div>
+</div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main Navigation">
+  <a class="nid" href="#hero" aria-label="Portfolio Home">Z.A // PORTFOLIO</a>
+  <ul class="nls" role="menubar">
+    <li role="none"><a href="#about" role="menuitem">About</a></li>
+    <li role="none"><a href="#skills" role="menuitem">Stack</a></li>
+    <li role="none"><a href="#projects" role="menuitem">Work</a></li>
+    <li role="none"><a href="#education" role="menuitem">Education</a></li>
+    <li role="none"><a href="#awards" role="menuitem">Awards</a></li>
+    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hcorner tl">DOHA, QA // LONDON, UK</div>
+  <div class="hcorner tr">BSC COMPUTER SCIENCE · 2026<br></div>
+  <div>
+    <div class="hlbl">// ai engineer · data scientist </div>
+    <h1 class="hname">
+      <span class="so">ZAYED</span><span class="ou">YOUSUF</span>
+    </h1>
+    <div class="hrow">
+      <div class="hcopy">
+        <div class="hsub">AI engineer and data scientist building <span>fair biometric systems</span>, LLM tools, and Data solutions.</div>
+        <div class="hcta">
+          <a class="btnx" href="#projects">View Work</a>
+          <a class="btnx ghost" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="hst">
+        <!-- <div class="hst-i"><div class="n">122K</div><div class="l">Images Tested</div></div> -->
+        <div class="hst-i"><div class="n">05</div><div class="l">Major Projects</div></div>
+        <div class="hst-i"><div class="n">2026</div><div class="l">Graduating</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="sind"><span>SCROLL</span><div class="sindl"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sw">
+    <div class="ag">
+      <div>
+        <div class="rv"><div class="slbl">01 — Identity</div><h2 class="sh">Research-grade AI,<br><em>built for</em><br>real users.</h2></div>
+        <div class="pw rv d2">
+          <div class="pb">
+            <div class="pph">
+              <div class="profile-mark">MZY</div>
+              <div class="profile-role">AI Engineer<br>Data Scientist</div>
+              <div class="profile-note">Doha and UK based builder focused on biometric fairness, applied ML, and practical AI systems.</div>
+            </div>
+            <div class="pc tl"></div><div class="pc br"></div>
+            <div class="pd"><p>AVAILABLE FOR AI, DATA, AND RESEARCH ROLES</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="rv d1">
+          <div class="slbl">Who I am</div>
+          <p class="bp">Final-year Computer Science Student at <strong>Liverpool John Moores University</strong>, working at the convergence of deep learning, biometric security, and intelligent systems. My work has one conviction: <strong>AI must be fair, precise, and trusted</strong> — not just powerful.</p>
+          <p class="bp">My capstone research project is an <strong>AI Face Recognition Payment System</strong> — production-grade biometric pipeline with multicultural fairness across 122,000+ images using post-hoc threshold calibration on frozen neural embeddings. I also build language models, retail platforms, and multimodal AI studios.</p>
+          <div class="vp">
+            <div class="vp-k">Why hire me</div>
+            <div class="vp-v">I connect research discipline with hands-on engineering: model evaluation, secure APIs, data pipelines, dashboards, and usable interfaces.</div>
+          </div>
+        </div>
+        <div class="dg rv d2">
+          <div class="dc"><div class="dn" data-count="122">0</div><div class="dl">K+ Images Evaluated</div></div>
+          <div class="dc"><div class="dn" data-count="3">0</div><div class="dl">Cross-Tested Datasets</div></div>
+          <div class="dc"><div class="dn" data-count="5">0</div><div class="dl">Major Projects</div></div>
+        </div>
+        <div class="chips rv d3">
+          <span class="chip">Machine Learning</span><span class="chip">Computer Vision</span>
+          <span class="chip">Biometrics</span><span class="chip">AI Ethics</span>
+          <span class="chip">LLM Engineering</span><span class="chip">Data Visualisation</span>
+          <span class="chip">Fintech</span><span class="chip">Multicultural AI</span><span class="chip">MEA Focus</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sw">
+    <div class="si">
+      <div class="rv"><div class="slbl">02 — Stack</div><h2 class="sh">Tools used<br>on <em>shipped</em> work.</h2><p class="sd">A practical stack across ML research, full-stack engineering, analytics, security, and AI API integration.</p></div>
+      <div class="rv d2" style="font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;color:var(--muted);line-height:2.3;">
+        PYTHON · PYTORCH · TENSORFLOW · INSIGHTFACE · SCIKIT-LEARN · KERAS<br>
+        FASTAPI · FLASK · PHP · MYSQL · MONGODB · JAVASCRIPT · HTML5/CSS3<br>
+        POWER BI · DAX · POWER QUERY · TABLEAU · JUPYTER · PANDAS · MATPLOTLIB<br>
+        AES-256-GCM · BIOHASHING · STRIPE · BOOTSTRAP · TAILWIND · JQUERY<br>
+        GEMINI 3 FLASH · APERTUS API · LLAMA 3 70B · NLP · JAVA · MATLAB<br>
+        FIGMA · BEAUTIFUL SOUP · XAMPP · VS CODE · GIT · GITHUB
+      </div>
+    </div>
+    <div class="scc rv d2">
+      <div class="sc"><div class="scw"><svg viewBox="0 0 100 100"><circle class="sc-tr" cx="50" cy="50" r="42"/><circle class="sc-fi" cx="50" cy="50" r="42" data-p="94"/></svg><div class="sci"><span class="sc-p" data-p="94">0%</span></div></div><span class="sc-n">Python · ML</span></div>
+      <div class="sc"><div class="scw"><svg viewBox="0 0 100 100"><circle class="sc-tr" cx="50" cy="50" r="42"/><circle class="sc-fi" cx="50" cy="50" r="42" data-p="90"/></svg><div class="sci"><span class="sc-p" data-p="90">0%</span></div></div><span class="sc-n">Data Vis</span></div>
+      <div class="sc"><div class="scw"><svg viewBox="0 0 100 100"><circle class="sc-tr" cx="50" cy="50" r="42"/><circle class="sc-fi" cx="50" cy="50" r="42" data-p="88"/></svg><div class="sci"><span class="sc-p" data-p="88">0%</span></div></div><span class="sc-n">Deep Learn</span></div>
+      <div class="sc"><div class="scw"><svg viewBox="0 0 100 100"><circle class="sc-tr" cx="50" cy="50" r="42"/><circle class="sc-fi" cx="50" cy="50" r="42" data-p="85"/></svg><div class="sci"><span class="sc-p" data-p="85">0%</span></div></div><span class="sc-n">PHP·MySQL</span></div>
+      <div class="sc"><div class="scw"><svg viewBox="0 0 100 100"><circle class="sc-tr" cx="50" cy="50" r="42"/><circle class="sc-fi" cx="50" cy="50" r="42" data-p="82"/></svg><div class="sci"><span class="sc-p" data-p="82">0%</span></div></div><span class="sc-n">FastAPI</span></div>
+      <div class="sc"><div class="scw"><svg viewBox="0 0 100 100"><circle class="sc-tr" cx="50" cy="50" r="42"/><circle class="sc-fi" cx="50" cy="50" r="42" data-p="78"/></svg><div class="sci"><span class="sc-p" data-p="78">0%</span></div></div><span class="sc-n">Security</span></div>
+    </div>
+    <div class="trow rv d3">
+      <div class="tt">Python</div><div class="tt">PyTorch</div><div class="tt">TensorFlow</div>
+      <div class="tt">InsightFace/ArcFace</div><div class="tt">Scikit-learn</div><div class="tt">Keras · NLP</div>
+      <div class="tt">FastAPI · Flask</div><div class="tt">PHP + MySQL</div><div class="tt">MongoDB</div>
+      <div class="tt">Power BI · DAX</div><div class="tt">Tableau</div><div class="tt">AES-256-GCM</div>
+      <div class="tt">BioHashing</div><div class="tt">Gemini 3 Flash</div><div class="tt">Apertus API</div>
+      <div class="tt">LLaMA 3 70B</div><div class="tt">Stripe</div><div class="tt">Bootstrap · Tailwind</div>
+      <div class="tt">Figma</div><div class="tt">Java · MATLAB</div><div class="tt">Beautiful Soup</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS HORIZONTAL -->
+<section id="projects">
+  <div class="ptop">
+    <div class="ptl"><span class="ptlbl">03 — Work</span><span class="ptcnt">5 Projects</span></div>
+    <span class="phint">← SCROLL TO NAVIGATE →</span>
+  </div>
+  <div class="ptrack" id="ptrack">
+
+    <!-- 01 FRPS -->
+    <div class="pslide" onclick="this.classList.toggle('op');this.setAttribute('aria-expanded',this.classList.contains('op'))" tabindex="0" role="button" aria-expanded="false" aria-label="Project 1: Face Recognition Payment System - Click to expand details">
+      <div class="psbadge">Capstone · FYP · 2026</div>
+      <div class="psacc psa-0"></div><div class="psbg psbg-0"></div>
+      <div class="psnum">01</div>
+      <div class="psc">
+        <div class="pscat">AI · Biometrics · Fintech · Computer Vision</div>
+        <div class="pstit">Face Recognition<br><em>Payment System</em></div>
+        <p class="psdesc">Research-grade biometric payment pipeline for multicultural fairness. Tested across UTKFace, FairFace, RFW (122K+ images). Post-hoc demographic-aware threshold calibration on frozen ArcFace embeddings. AES-256-GCM encrypted storage, BioHashing, Stripe checkout.</p>
+        <div class="pschips"><span class="pschip">InsightFace/ArcFace</span><span class="pschip">FastAPI</span><span class="pschip">AES-256-GCM</span><span class="pschip">BioHashing</span><span class="pschip">Stripe API</span><span class="pschip">UTKFace·FairFace·RFW</span></div>
+        <div class="psactions"><a class="pslink" href="mailto:zayedyousuf3@gmail.com?subject=Face%20Recognition%20Payment%20System%20case%20study">Request case study</a></div>
+      </div>
+      <div class="psex"><div class="psex-in">
+        <div><div class="psel">Research Contribution</div><p class="psxt">First post-hoc demographic threshold calibration on frozen embeddings — equitable FAR/FRR without retraining. Designed for UAE multicultural population context.</p></div>
+        <div><div class="psel">Key Outcomes</div><ul class="psxl"><li>122K+ image evaluation</li><li>3 datasets cross-tested</li><li>Live face capture demo</li><li>Bias mitigation w/o retraining</li></ul></div>
+      </div></div>
+      <div class="psfoot"><span class="psyr">2025–2026</span><div class="psarr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div></div>
+    </div>
+
+    <!-- 02 APERTUS -->
+    <div class="pslide" onclick="this.classList.toggle('op');this.setAttribute('aria-expanded',this.classList.contains('op'))" tabindex="0" role="button" aria-expanded="false" aria-label="Project 2: Apertus AI Studio - Click to expand details">
+      <div class="psacc psa-1"></div><div class="psbg psbg-1"></div>
+      <div class="psnum">02</div>
+      <div class="psc">
+        <div class="pscat">LLM Engineering · Multimodal AI · Code Generation</div>
+        <div class="pstit">Apertus<br><em>AI Studio</em></div>
+        <p class="psdesc">Dual-model multimodal AI chatbot studio — Gemini 3 Flash Preview + Apertus Swiss-AI 8B Instruct, optional LLaMA 3 70B locally. Built-in live code editor, dynamic graph visualiser, text+image input, environment-variable secured dual APIs.</p>
+        <div class="pschips"><span class="pschip">Gemini 3 Flash</span><span class="pschip">Apertus/Swiss-AI 8B</span><span class="pschip">JavaScript</span><span class="pschip">Python</span><span class="pschip">LLaMA 3 70B</span></div>
+        <div class="psactions"><a class="pslink" href="mailto:zayedyousuf3@gmail.com?subject=Apertus%20AI%20Studio%20demo">Request demo</a></div>
+      </div>
+      <div class="psex"><div class="psex-in">
+        <div><div class="psel">Architecture</div><p class="psxt">LLM logic decoupled from UI. Flash model ensures real-time latency. Modular component system — editor and graph viewer independent. Dual secure API key management.</p></div>
+        <div><div class="psel">Features</div><ul class="psxl"><li>Live code editor + runner</li><li>Dynamic graph visualiser</li><li>Session-persistent context</li><li>Local LLaMA 3 70B fallback</li></ul></div>
+      </div></div>
+      <div class="psfoot"><span class="psyr">2026</span><div class="psarr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div></div>
+    </div>
+
+    <!-- 03 THE MARKET -->
+    <div class="pslide" onclick="this.classList.toggle('op');this.setAttribute('aria-expanded',this.classList.contains('op'))" tabindex="0" role="button" aria-expanded="false" aria-label="Project 3: The Market - E-Commerce Platform - Click to expand details">
+      <div class="psacc psa-2"></div><div class="psbg psbg-2"></div>
+      <div class="psnum">03</div>
+      <div class="psc">
+        <div class="pscat">E-Commerce · Full-Stack · MEA Retail Platform</div>
+        <div class="pstit">The<br><em>Market</em></div>
+        <p class="psdesc">Full-stack hypermarket-style e-commerce for the MEA region. PHP/MySQL backend, Bootstrap frontend, Arabic typography. 7 product categories, live database search, user auth, shopping cart, and a CSV-driven product catalogue — built end-to-end.</p>
+        <div class="pschips"><span class="pschip">PHP</span><span class="pschip">MySQL</span><span class="pschip">Bootstrap 3</span><span class="pschip">jQuery</span><span class="pschip">HTML5/CSS3/JS</span><span class="pschip">XAMPP</span></div>
+        <div class="psactions"><a class="pslink" href="mailto:zayedyousuf3@gmail.com?subject=The%20Market%20project%20walkthrough">Request walkthrough</a></div>
+      </div>
+      <div class="psex"><div class="psex-in">
+        <div><div class="psel">Platform</div><p class="psxt">Multi-page database-driven retail ecosystem — 10+ pages including Home, Products, Offers, Categories, Cart, Login, and Policy pages. RTL Arabic-ready via Noto Kufi Arabic.</p></div>
+        <div><div class="psel">Features</div><ul class="psxl"><li>7 categories · 10+ pages</li><li>Live MySQL product search</li><li>User sessions + cart</li><li>Barcode + pricing dataset</li></ul></div>
+      </div></div>
+      <div class="psfoot"><span class="psyr">2025</span><div class="psarr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div></div>
+    </div>
+
+    <!-- 04 POWER BI -->
+    <div class="pslide" onclick="this.classList.toggle('op');this.setAttribute('aria-expanded',this.classList.contains('op'))" tabindex="0" role="button" aria-expanded="false" aria-label="Project 4: Obesity Pattern Intelligence - Power BI Dashboard - Click to expand details">
+      <div class="psacc psa-3"></div><div class="psbg psbg-3"></div>
+      <div class="psnum">04</div>
+      <div class="psc">
+        <div class="pscat">Data Intelligence · Power BI · Health Analytics</div>
+        <div class="pstit">Obesity Pattern<br><em>Intelligence</em></div>
+        <p class="psdesc">Multi-page Power BI dashboard analysing obesity patterns across 2,111 records. Led the "System Behind the Weight" systemic analysis page. Custom DAX, three analyst perspectives. Argued CON position in structured team debate on visualisation limitations.</p>
+        <div class="pschips"><span class="pschip">Power BI</span><span class="pschip">DAX</span><span class="pschip">Data Modelling</span><span class="pschip">Custom Themes</span></div>
+        <div class="psactions"><a class="pslink" href="mailto:zayedyousuf3@gmail.com?subject=Power%20BI%20dashboard%20sample">Request sample</a></div>
+      </div>
+      <div class="psex"><div class="psex-in">
+        <div><div class="psel">Approach</div><p class="psxt">Systemic causal-chain framing connecting lifestyle, metabolic, and environmental factors. British formal academic narrative across three analyst perspectives.</p></div>
+        <div><div class="psel">Details</div><ul class="psxl"><li>2,111 records · 17 variables</li><li>Custom DAX BMI classification</li><li>3 analyst dashboard views</li><li>Structured debate contribution</li></ul></div>
+      </div></div>
+      <div class="psfoot"><span class="psyr">2026</span><div class="psarr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div></div>
+    </div>
+
+    <!-- 05 COST OF LIVING -->
+    <div class="pslide" onclick="this.classList.toggle('op');this.setAttribute('aria-expanded',this.classList.contains('op'))" tabindex="0" role="button" aria-expanded="false" aria-label="Project 5: Cost of Living Visual Intelligence - Click to expand details">
+      <div class="psacc psa-4"></div><div class="psbg psbg-4"></div>
+      <div class="psnum">05</div>
+      <div class="psc">
+        <div class="pscat">Computer Graphics · Data Science · EDA</div>
+        <div class="pstit">Cost of Living<br><em>Visual Intelligence</em></div>
+        <p class="psdesc">Full EDA pipeline on Numbeo Cost of Living Index 2026 — Python, Jupyter, Matplotlib, Seaborn. Three simultaneous deliverables: academic report, PowerPoint presentation, and annotated Jupyter Notebook with publication-quality figures.</p>
+        <div class="pschips"><span class="pschip">Python</span><span class="pschip">Jupyter</span><span class="pschip">Matplotlib</span><span class="pschip">Seaborn</span><span class="pschip">Pandas</span></div>
+        <div class="psactions"><a class="pslink" href="mailto:zayedyousuf3@gmail.com?subject=Cost%20of%20Living%20analysis%20sample">Request notebook</a></div>
+      </div>
+      <div class="psex"><div class="psex-in">
+        <div><div class="psel">Deliverables</div><p class="psxt">Three-format simultaneous academic delivery — Jupyter Notebook, PowerPoint deck, and formal academic report, all from one rigorous pipeline.</p></div>
+        <div><div class="psel">Details</div><ul class="psxl"><li>Numbeo 2024 dataset</li><li>Full statistical EDA</li><li>Publication-quality charts</li><li>British formal register</li></ul></div>
+      </div></div>
+      <div class="psfoot"><span class="psyr">2025–2026</span><div class="psarr"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="sw">
+    <div class="rv"><div class="slbl">04 - Education</div><h2 class="sh">Where the<br><em>foundation</em><br>was built.</h2></div>
+    <div class="edu-grid">
+      <div class="edu-card rv d1">
+        <div class="edu-deg">BSc (Hons) <em>Computer Science</em></div>
+        <div class="edu-inst">Liverpool John Moores University, UK</div>
+        <div class="edu-year">2023 - 2026</div>
+        <p class="edu-note">Specialising in AI, machine learning, data science, and software engineering. Final-year research project on biometric AI fairness. Awaiting final grades.</p>
+        <span class="edu-badge">Awaiting Final Grades - 2026</span>
+      </div>
+      <div class="edu-card rv d2">
+        <div class="edu-deg">HND Computing <em>(Software Engineering)</em></div>
+        <div class="edu-inst">DeMont Institute of Management &amp; Technology - Pearson BTEC Level 5</div>
+        <div class="edu-year">2023 - 2025</div>
+        <p class="edu-note">Higher National Diploma in Computing with a Software Engineering pathway. Covered advanced software architecture, database systems, object-oriented programming, and professional development.</p>
+        <span class="edu-badge">Grade: Distinction - August 2025<br>Distinction across all modules</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS & CERTIFICATIONS -->
+<section id="awards">
+  <div class="sw">
+    <div class="rv"><div class="slbl">05 - Recognition</div><h2 class="sh">Awards &amp;<br><em>Certifications</em></h2></div>
+    <div class="awards-grid">
+
+      <div class="award-card highlight rv d1">
+        <span class="award-icon">🏆</span>
+        <div class="award-title">Winner — Research Poster Competition</div>
+        <div class="award-org">DeMont Institute of Management &amp; Technology</div>
+        <div class="award-date">May 2025</div>
+      </div>
+
+      <div class="award-card rv d2">
+        <span class="award-icon">🥉</span>
+        <div class="award-title">3rd Place — University Coding Competition</div>
+        <div class="award-org">DeMont Institute of Management &amp; Technology</div>
+        <div class="award-date">May 2025</div>
+      </div>
+
+      <div class="award-card rv d3">
+        <span class="award-icon">🎖</span>
+        <div class="award-title">Student Ambassador Award</div>
+        <div class="award-org">DeMont Institute of Management &amp; Technology</div>
+        <div class="award-date">June 2025</div>
+      </div>
+
+      <div class="award-card rv d1">
+        <span class="award-icon">🎓</span>
+        <div class="award-title">CS50x — Introduction to Computer Science</div>
+        <div class="award-org">Harvard University</div>
+        <div class="award-date">May 2025</div>
+      </div>
+
+      <div class="award-card rv d2">
+        <span class="award-icon">💼</span>
+        <div class="award-title">Developer &amp; Technology Job Simulation</div>
+        <div class="award-org">Accenture UK · Forage</div>
+        <div class="award-date">May 2025</div>
+      </div>
+
+      <div class="award-card rv d3">
+        <span class="award-icon">🤖</span>
+        <div class="award-title">Introduction to Artificial Intelligence</div>
+        <div class="award-org">NIIT</div>
+        <div class="award-date">August 2024</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sw">
+    <div class="rv"><div class="slbl">06 - Connect</div></div>
+    <div class="cbig rv d1">LET'S BUILD<br>SOMETHING<br><span class="ac">USEFUL.</span></div>
+    <!-- CONTACT FORM -->
+    <div class="cform rv d2" id="contact-form-wrap">
+      <div class="cform-title">// send a message</div>
+      <form id="cform" action="https://formspree.io/f/mykabklo" method="POST" novalidate>
+        <div class="cform-grid">
+          <div class="cform-field">
+            <label class="cform-label" for="cf-name">Name <span style="color:var(--coral);">*</span></label>
+            <input class="cform-input" type="text" id="cf-name" name="name" placeholder="Your full name" required aria-required="true" autocomplete="name">
+          </div>
+          <div class="cform-field">
+            <label class="cform-label" for="cf-email">Email <span style="color:var(--coral);">*</span></label>
+            <input class="cform-input" type="email" id="cf-email" name="email" placeholder="your@email.com" required aria-required="true" autocomplete="email">
+          </div>
+          <div class="cform-field full">
+            <label class="cform-label" for="cf-subject">Subject</label>
+            <input class="cform-input" type="text" id="cf-subject" name="subject" placeholder="e.g., MSc opportunity, Collaboration, etc.">
+          </div>
+          <div class="cform-field full">
+            <label class="cform-label" for="cf-msg">Message <span style="color:var(--coral);">*</span></label>
+            <textarea class="cform-textarea" id="cf-msg" name="message" placeholder="Tell me about your project or opportunity..." required aria-required="true"></textarea>
+          </div>
+        </div>
+        <button class="cform-submit" type="submit" id="cf-btn">Send Message</button>
+        <div class="cform-error" id="cf-error">Something went wrong — please try emailing directly.</div>
+      </form>
+      <div class="cform-success" id="cf-success">
+        MESSAGE RECEIVED.
+        <p>I'll get back to you within 48 hours.</p>
+      </div>
+    </div>
+
+    <!-- Social / Direct links -->
+    <div class="cls rv d3">
+      <a href="https://www.linkedin.com/in/mohammed-zayed-yousuf/" target="_blank" rel="noopener noreferrer" class="cl" title="Visit LinkedIn Profile"><span class="cln">LinkedIn</span><span class="clh">mohammed-zayed-yousuf →</span></a>
+      <a href="mailto:zayedyousuf3@gmail.com" class="cl" title="Send Email"><span class="cln">Email</span><span class="clh">zayedyousuf3@gmail.com →</span></a>
+      <a href="https://github.com/mohammedzayedyousuf1" target="_blank" rel="noopener noreferrer" class="cl" title="Visit GitHub Profile"><span class="cln">GitHub</span><span class="clh">github.com/mohammedzayedyousuf1 →</span></a>
+    </div>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="fc">© 2026 MOHAMMED ZAYED YOUSUF — ALL RIGHTS RESERVED</div>
+  <div class="fb">BUILT WITH <span>PRECISION</span> · <span>LONDON / DOHA</span> · <a href="mailto:zayedyousuf3@gmail.com?subject=Privacy%20question" title="Privacy Contact" style="color:var(--muted);text-decoration:none;border-bottom:1px solid var(--muted);">PRIVACY CONTACT</a></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+// ═══════════════════ SECURITY - HTTPS ENFORCEMENT ═══════════════════
+(function() {
+  // Redirect HTTP to HTTPS (except for local development)
+  const isLocalDev = location.hostname === 'localhost' || 
+                     location.hostname === '127.0.0.1' || 
+                     location.hostname === '0.0.0.0' ||
+                     location.hostname.startsWith('192.168.') ||
+                     location.hostname.endsWith('.local');
+  
+  if (location.protocol === 'http:' && !isLocalDev) {
+    location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+  }
+  
+  // Validate CSP is present
+  if (!document.querySelector('meta[http-equiv="Content-Security-Policy"]')) {
+    console.warn('⚠️ Content Security Policy not configured');
+  }
+})();
+
+// ═══════════════════ BOOT LOADER ═══════════════════
+const bootLines=['b0','b1','b2','b3','b4','b5','b6','b7'];
+let bi=0;
+function nextLine(){
+  if(bi<bootLines.length){
+    document.getElementById(bootLines[bi]).classList.add('s');
+    bi++;
+    setTimeout(nextLine,bi<5?110:bi<7?150:95);
+  }else{
+    const bw=document.getElementById('bbw');
+    bw.classList.add('s');
+    setTimeout(()=>{
+      const bar=document.getElementById('bbar');
+      bar.style.width='100%';
+      let p=0;
+      const ti=setInterval(()=>{
+        p=Math.min(p+Math.random()*5+1,100);
+        document.getElementById('bpct').textContent=Math.floor(p)+'%';
+        if(p>=100){clearInterval(ti);document.getElementById('brd').classList.add('s');setTimeout(()=>document.getElementById('loader').classList.add('out'),280);}
+      },24);
+    },200);
+  }
+}
+setTimeout(nextLine,120);
+
+// ═══════════════════ THREE.JS ═══════════════════
+if(typeof THREE !== 'undefined'){
+const bgc=document.getElementById('bgc');
+const renderer=new THREE.WebGLRenderer({canvas:bgc,alpha:true,antialias:true});
+renderer.setSize(window.innerWidth,window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(60,window.innerWidth/window.innerHeight,0.1,100);
+camera.position.set(0,0,6);
+
+// Particle sphere
+const N=4200,pp=new Float32Array(N*3),pc=new Float32Array(N*3);
+const col=new THREE.Color();
+for(let i=0;i<N;i++){
+  const phi=Math.acos(-1+(2*i)/N);
+  const th=Math.sqrt(N*Math.PI)*phi;
+  const r=2.2+(Math.random()-.5)*.7;
+  pp[i*3]=r*Math.sin(phi)*Math.cos(th);
+  pp[i*3+1]=r*Math.sin(phi)*Math.sin(th);
+  pp[i*3+2]=r*Math.cos(phi);
+  const t=Math.random();
+  col.set(t<.5?0x00FFD1:t<.75?0x7B38FF:0xFF3D6E);
+  pc[i*3]=col.r;pc[i*3+1]=col.g;pc[i*3+2]=col.b;
+}
+const pGeo=new THREE.BufferGeometry();
+pGeo.setAttribute('position',new THREE.BufferAttribute(pp,3));
+pGeo.setAttribute('color',new THREE.BufferAttribute(pc,3));
+const pMat=new THREE.PointsMaterial({size:.016,vertexColors:true,transparent:true,opacity:.75,sizeAttenuation:true,depthWrite:false});
+const pSph=new THREE.Points(pGeo,pMat);
+
+// Stars
+const SN=700,sp=new Float32Array(SN*3);
+for(let i=0;i<SN;i++){const r=10+Math.random()*18;const p=Math.random()*Math.PI*2;const t=Math.random()*Math.PI;sp[i*3]=r*Math.sin(t)*Math.cos(p);sp[i*3+1]=r*Math.sin(t)*Math.sin(p);sp[i*3+2]=r*Math.cos(t);}
+const sGeo=new THREE.BufferGeometry();sGeo.setAttribute('position',new THREE.BufferAttribute(sp,3));
+const sMesh=new THREE.Points(sGeo,new THREE.PointsMaterial({size:.04,color:0x778899,transparent:true,opacity:.3}));
+
+// Icosahedron wireframe
+const icoG=new THREE.IcosahedronGeometry(2.5,1);
+const ico=new THREE.LineSegments(new THREE.EdgesGeometry(icoG),new THREE.LineBasicMaterial({color:0x00FFD1,transparent:true,opacity:.07}));
+
+// Orbital tori
+const t1=new THREE.Mesh(new THREE.TorusGeometry(2.8,.005,2,120),new THREE.MeshBasicMaterial({color:0x00FFD1,transparent:true,opacity:.22}));
+const t2=new THREE.Mesh(new THREE.TorusGeometry(3,.004,2,120),new THREE.MeshBasicMaterial({color:0x7B38FF,transparent:true,opacity:.15}));
+t1.rotation.x=Math.PI/2;t2.rotation.x=Math.PI/4;t2.rotation.y=Math.PI/6;
+
+const grp=new THREE.Group();
+grp.add(pSph,ico,t1,t2);
+grp.position.set(2.8,0,0);
+scene.add(grp,sMesh);
+
+let mox=0,moy=0;
+document.addEventListener('mousemove',e=>{mox=(e.clientX/window.innerWidth-.5)*2;moy=(e.clientY/window.innerHeight-.5)*2;});
+
+const clk=new THREE.Clock();
+(function anim(){
+  requestAnimationFrame(anim);
+  const t=clk.getElapsedTime();
+  grp.rotation.y=t*.09;grp.rotation.x=t*.04;
+  ico.rotation.y=-t*.06;ico.rotation.z=t*.03;
+  t1.rotation.z=t*.14;t2.rotation.y=t*.11;
+  grp.position.x=2.8+mox*.3;grp.position.y=-moy*.3;
+  renderer.render(scene,camera);
+})();
+
+window.addEventListener('resize',()=>{
+  camera.aspect=window.innerWidth/window.innerHeight;camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth,window.innerHeight);
+});
+}
+
+// ═══════════════════ CURSOR ═══════════════════
+const cd=document.getElementById('cd'),cr=document.getElementById('cr');
+const ct=document.getElementById('ctrail'),ctx=ct.getContext('2d');
+ct.width=window.innerWidth;ct.height=window.innerHeight;
+window.addEventListener('resize',()=>{ct.width=window.innerWidth;ct.height=window.innerHeight;});
+let cx2=0,cy2=0,rx=0,ry=0;const trail=[];
+document.addEventListener('mousemove',e=>{
+  cx2=e.clientX;cy2=e.clientY;
+  cd.style.left=cx2+'px';cd.style.top=cy2+'px';
+  cd.style.opacity='1';cr.style.opacity='1';
+  trail.push({x:cx2,y:cy2,a:0});if(trail.length>48)trail.shift();
+});
+(function animCr(){
+  requestAnimationFrame(animCr);
+  rx+=(cx2-rx)*.1;ry+=(cy2-ry)*.1;
+  cr.style.left=rx+'px';cr.style.top=ry+'px';
+  ctx.clearRect(0,0,ct.width,ct.height);
+  trail.forEach(p=>{p.a++;const l=1-p.a/48;ctx.beginPath();ctx.arc(p.x,p.y,l*3.5,0,Math.PI*2);ctx.fillStyle=`rgba(0,255,209,${l*.1})`;ctx.fill();});
+})();
+document.querySelectorAll('a,button,.pslide,.chip,.tt,.cl,.sc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('h'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('h'));
+});
+
+// ═══════════════════ NAV ═══════════════════
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sk',window.scrollY>60));
+
+// ═══════════════════ REVEAL ═══════════════════
+const revO=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');revO.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>revO.observe(el));
+
+// ═══════════════════ SKILL CIRCLES ═══════════════════
+const scO=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.querySelectorAll('.sc-fi').forEach(circle=>{
+        const p=parseInt(circle.dataset.p);
+        circle.style.strokeDashoffset=264*(1-p/100);
+      });
+      entry.target.querySelectorAll('.sc-p').forEach(el=>{
+        const target=parseInt(el.dataset.p);
+        let cur=0;
+        const ti=setInterval(()=>{
+          cur=Math.min(cur+2,target);
+          el.textContent=cur+'%';
+          if(cur>=target)clearInterval(ti);
+        },18);
+      });
+      scO.unobserve(entry.target);
+    }
+  });
+},{threshold:.15,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.scc').forEach(el=>scO.observe(el));
+
+// ═══════════════════ COUNT-UP ═══════════════════
+function cu(el){
+  const t=parseInt(el.dataset.count),s=el.dataset.count==='122'?'K+':'+';
+  let c=0;const ti=setInterval(()=>{c+=t/40;if(c>=t){el.textContent=t+s;clearInterval(ti);return;}el.textContent=Math.floor(c)+s;},35);
+}
+new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('[data-count]').forEach(cu);}});},{threshold:.5}).observe(document.querySelector('.dg'));
+
+// ═══════════════════ SCRAMBLE ═══════════════════
+function scramble(el){
+  const orig=el.textContent,ch='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$@!&';
+  let iter=0;clearInterval(el._sc);
+  el._sc=setInterval(()=>{
+    el.textContent=orig.split('').map((c,i)=>i<iter?orig[i]:ch[Math.floor(Math.random()*ch.length)]).join('');
+    if(iter>=orig.length)clearInterval(el._sc);iter+=.7;
+  },35);
+}
+document.querySelectorAll('.hname .so,.hname .ou').forEach(el=>el.addEventListener('mouseenter',()=>scramble(el)));
+
+// ═══════════════════ GSAP HORIZONTAL SCROLL ═══════════════════
+if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'&&window.matchMedia('(min-width: 981px)').matches){
+  gsap.registerPlugin(ScrollTrigger);
+  const track=document.getElementById('ptrack');
+  gsap.to(track,{
+    x:()=>-(track.scrollWidth-window.innerWidth+128),ease:'none',
+    scrollTrigger:{trigger:'#projects',start:'top top',end:()=>'+='+(track.scrollWidth-window.innerWidth+128),pin:true,scrub:.85,anticipatePin:1,invalidateOnRefresh:true}
+  });
+  // Hero scroll parallax
+  gsap.to('.hname',{y:-90,opacity:.2,scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.hrow',{y:-50,opacity:0,scrollTrigger:{trigger:'#hero',start:'20% top',end:'bottom top',scrub:true}});
+}
+
+// ═══════════════════ 3D CARD TILT ═══════════════════
+document.querySelectorAll('.pslide').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const xp=(e.clientX-r.left)/r.width,yp=(e.clientY-r.top)/r.height;
+    card.style.transform=`perspective(1200px) rotateX(${(yp-.5)*-9}deg) rotateY(${(xp-.5)*11}deg)`;
+    card.style.transition='transform .05s,border-color .4s';
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='perspective(1200px) rotateX(0deg) rotateY(0deg)';
+    card.style.transition='transform .6s cubic-bezier(.16,1,.3,1),border-color .4s';
+  });
+});
+
+// ═══════════════════ MAGNETIC CONTACT LINKS ═══════════════════
+document.querySelectorAll('.cl').forEach(el=>{
+  el.addEventListener('mousemove',e=>{
+    const r=el.getBoundingClientRect();
+    const dx=(e.clientX-(r.left+r.width/2))*.1,dy=(e.clientY-(r.top+r.height/2))*.1;
+    el.style.transform=`translate(${dx}px,${dy}px)`;el.style.transition='transform .1s,color .3s';
+  });
+  el.addEventListener('mouseleave',()=>{el.style.transform='';el.style.transition='transform .5s cubic-bezier(.16,1,.3,1),color .3s';});
+});
+
+// ═══════════════════ FORMSPREE CONTACT FORM ═══════════════════
+document.querySelectorAll('.pslink').forEach(link=>{
+  link.addEventListener('click',e=>e.stopPropagation());
+});
+document.querySelectorAll('.pslide').forEach(card=>{
+  card.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){
+      e.preventDefault();
+      card.classList.toggle('op');
+      card.setAttribute('aria-expanded',card.classList.contains('op'));
+    }
+  });
+});
+
+const cform = document.getElementById('cform');
+if(cform){
+  // Form submission rate limiting & security
+  let lastSubmitTime = 0;
+  const SUBMIT_COOLDOWN = 5000; // 5 seconds between submissions
+  const MAX_ATTEMPTS = 10; // Max 10 attempts per hour
+  const submissions = { count: 0, resetTime: Date.now() + 3600000 };
+  
+  cform.addEventListener('submit', async e => {
+    e.preventDefault();
+    
+    const now = Date.now();
+    const btn = document.getElementById('cf-btn');
+    const err = document.getElementById('cf-error');
+    const success = document.getElementById('cf-success');
+    const nameInput = document.getElementById('cf-name');
+    const emailInput = document.getElementById('cf-email');
+    const msgInput = document.getElementById('cf-msg');
+    
+    // ═══════════════════ SECURITY CHECKS ═══════════════════
+    // 1. Check rate limiting
+    if (now - lastSubmitTime < SUBMIT_COOLDOWN) {
+      err.textContent = '⏱️ Please wait ' + Math.ceil((SUBMIT_COOLDOWN - (now - lastSubmitTime))/1000) + ' seconds before sending another message';
+      err.style.display = 'block';
+      return;
+    }
+    
+    // 2. Check hourly limit
+    if (now > submissions.resetTime) {
+      submissions.count = 0;
+      submissions.resetTime = now + 3600000;
+    }
+    if (submissions.count >= MAX_ATTEMPTS) {
+      err.textContent = '❌ Too many attempts. Please try again in 1 hour.';
+      err.style.display = 'block';
+      return;
+    }
+    
+    // 3. Validate inputs
+    if(!nameInput.value.trim()){
+      err.textContent = '❌ Please enter your name';
+      err.style.display = 'block';
+      nameInput.focus();
+      return;
+    }
+    if(!emailInput.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)){
+      err.textContent = '❌ Please enter a valid email address';
+      err.style.display = 'block';
+      emailInput.focus();
+      return;
+    }
+    if(msgInput.value.trim().length < 10){
+      err.textContent = '❌ Message must be at least 10 characters';
+      err.style.display = 'block';
+      msgInput.focus();
+      return;
+    }
+    if(msgInput.value.length > 5000){
+      err.textContent = '❌ Message cannot exceed 5000 characters';
+      err.style.display = 'block';
+      return;
+    }
+    
+    // 4. Basic XSS check - no HTML tags in user input
+    const tags = ['<script', '<iframe', '<img', 'javascript:', 'onerror=', 'onload='];
+    const inputs = [nameInput.value, emailInput.value, msgInput.value];
+    for (let input of inputs) {
+      for (let tag of tags) {
+        if (input.toLowerCase().includes(tag)) {
+          err.textContent = '❌ Invalid characters detected. Please remove special HTML characters.';
+          err.style.display = 'block';
+          return;
+        }
+      }
+    }
+    
+    lastSubmitTime = now;
+    submissions.count++;
+    err.style.display = 'none';
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    
+    // GA4 event — contact form submitted
+    if(typeof gtag !== 'undefined') gtag('event','form_submit',{event_category:'contact',event_label:'portfolio_contact'});
+    
+    try {
+      // 5. Add request timeout (10 seconds)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000);
+      
+      // 6. Ensure HTTPS
+      if (cform.action.startsWith('http://')) {
+        throw new Error('Form submission requires HTTPS');
+      }
+      
+      const res = await fetch(cform.action, {
+        method: 'POST',
+        body: new FormData(cform),
+        headers: { 'Accept': 'application/json' },
+        signal: controller.signal,
+        credentials: 'same-origin'
+      });
+      
+      clearTimeout(timeoutId);
+      
+      if(res.ok){
+        cform.style.display = 'none';
+        success.style.display = 'block';
+        document.getElementById('cf-btn') && (document.getElementById('cf-btn').style.display='none');
+        
+        // Reset form for potential future use
+        setTimeout(() => {
+          cform.reset();
+          cform.style.display = 'block';
+          success.style.display = 'none';
+          document.getElementById('cf-btn').style.display = 'block';
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+        }, 5000);
+      } else {
+        throw new Error('Server returned status ' + res.status);
+      }
+    } catch(e) {
+      console.error('Form submission error:', e);
+      err.textContent = '❌ Error sending message. Please email zayedyousuf3@gmail.com directly.';
+      err.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    }
+  });
+}
+
+// GA4 — track project card clicks
+document.querySelectorAll('.pslide').forEach((card, i) => {
+  card.addEventListener('click', () => {
+    if(typeof gtag !== 'undefined') gtag('event','project_view',{event_category:'projects',event_label:`project_${i+1}`});
+  });
+});
+
+</script>
+</body>
+</html>
